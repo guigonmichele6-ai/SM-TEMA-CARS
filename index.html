@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="SM TEMA CARS, location de véhicules automobiles sans chauffeur à Temara."
+    >
+    <title>SM TEMA CARS | Location de voitures à Temara</title>
+    <link rel="preload" href="assets/hero-fleet.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#accueil" aria-label="SM TEMA CARS accueil">
+        <span class="brand-mark">SM</span>
+        <span>
+          <strong>SM TEMA CARS</strong>
+          <small>Location sans chauffeur</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Ouvrir le menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <a href="#gammes">Gammes</a>
+        <a href="#services">Services</a>
+        <a href="#reservation">Réservation</a>
+        <a href="#infos">Infos société</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="accueil" aria-labelledby="hero-title">
+        <img
+          class="hero-media"
+          src="assets/hero-fleet.png"
+          alt="Deux véhicules de location modernes stationnés sur une avenue urbaine."
+        >
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Temara • Location de véhicules automobiles sans chauffeur</p>
+          <h1 id="hero-title">SM TEMA CARS</h1>
+          <p class="hero-lede">
+            Des solutions de location souples pour vos trajets professionnels, familiaux
+            et longue durée depuis l'agence de Temara.
+          </p>
+          <div class="hero-actions" aria-label="Actions principales">
+            <a class="button primary" href="#reservation">Préparer une demande</a>
+            <a
+              class="button ghost"
+              href="https://www.google.com/maps/search/?api=1&query=3189%20Lot%20Wifak%20Erak%20T461%20RDC%20Temara%20Morocco"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Itinéraire
+            </a>
+          </div>
+        </div>
+
+        <form class="booking-strip" id="quick-booking" aria-label="Préparer une demande de location">
+          <label>
+            <span>Départ</span>
+            <input id="pickup-date" name="pickup-date" type="date" required>
+          </label>
+          <label>
+            <span>Retour</span>
+            <input id="return-date" name="return-date" type="date" required>
+          </label>
+          <label>
+            <span>Véhicule</span>
+            <select id="vehicle-type" name="vehicle-type">
+              <option>Citadine</option>
+              <option>Berline</option>
+              <option>SUV</option>
+              <option>Utilitaire</option>
+              <option>Longue durée</option>
+            </select>
+          </label>
+          <button class="button primary compact" type="submit">Voir ma demande</button>
+        </form>
+      </section>
+
+      <section class="section intro-band" aria-label="Points forts">
+        <div class="metric">
+          <strong>Sans chauffeur</strong>
+          <span>Location simple et autonome</span>
+        </div>
+        <div class="metric">
+          <strong>Temara</strong>
+          <span>Agence située Lot Wifak Erak</span>
+        </div>
+        <div class="metric">
+          <strong>SARL</strong>
+          <span>Capital social 100 000 D</span>
+        </div>
+      </section>
+
+      <section class="section" id="gammes" aria-labelledby="gammes-title">
+        <div class="section-heading">
+          <p class="eyebrow dark">Choisir selon le trajet</p>
+          <h2 id="gammes-title">Gammes de véhicules</h2>
+          <p>
+            Une présentation claire des catégories possibles. La disponibilité réelle se
+            confirme directement avec l'agence.
+          </p>
+        </div>
+
+        <div class="segmented-control" role="tablist" aria-label="Filtrer les gammes">
+          <button class="segment active" type="button" data-filter="all">Tous</button>
+          <button class="segment" type="button" data-filter="city">Ville</button>
+          <button class="segment" type="button" data-filter="comfort">Confort</button>
+          <button class="segment" type="button" data-filter="volume">Volume</button>
+        </div>
+
+        <div class="fleet-grid">
+          <article class="fleet-card" data-category="city">
+            <div class="fleet-visual city-car" aria-hidden="true"></div>
+            <div class="fleet-copy">
+              <p class="tag">Ville</p>
+              <h3>Citadine</h3>
+              <p>Pratique pour Temara, Rabat, Salé et les déplacements quotidiens.</p>
+              <ul>
+                <li>Consommation maîtrisée</li>
+                <li>Stationnement facile</li>
+                <li>Tarif sur demande</li>
+              </ul>
+              <button class="text-button choose-car" type="button" data-choice="Citadine">
+                Choisir cette gamme
+              </button>
+            </div>
+          </article>
+
+          <article class="fleet-card" data-category="comfort">
+            <div class="fleet-visual sedan-car" aria-hidden="true"></div>
+            <div class="fleet-copy">
+              <p class="tag">Confort</p>
+              <h3>Berline</h3>
+              <p>Adaptée aux rendez-vous professionnels et aux trajets interurbains.</p>
+              <ul>
+                <li>Habitacle confortable</li>
+                <li>Bonne tenue de route</li>
+                <li>Tarif sur demande</li>
+              </ul>
+              <button class="text-button choose-car" type="button" data-choice="Berline">
+                Choisir cette gamme
+              </button>
+            </div>
+          </article>
+
+          <article class="fleet-card" data-category="comfort volume">
+            <div class="fleet-visual suv-car" aria-hidden="true"></div>
+            <div class="fleet-copy">
+              <p class="tag">Espace</p>
+              <h3>SUV</h3>
+              <p>Pour les familles, les bagages et les routes plus longues.</p>
+              <ul>
+                <li>Position de conduite haute</li>
+                <li>Volume de coffre</li>
+                <li>Tarif sur demande</li>
+              </ul>
+              <button class="text-button choose-car" type="button" data-choice="SUV">
+                Choisir cette gamme
+              </button>
+            </div>
+          </article>
+
+          <article class="fleet-card" data-category="volume">
+            <div class="fleet-visual utility-car" aria-hidden="true"></div>
+            <div class="fleet-copy">
+              <p class="tag">Volume</p>
+              <h3>Utilitaire</h3>
+              <p>Pour transporter matériel, cartons ou équipements professionnels.</p>
+              <ul>
+                <li>Espace de chargement</li>
+                <li>Location courte ou longue durée</li>
+                <li>Tarif sur demande</li>
+              </ul>
+              <button class="text-button choose-car" type="button" data-choice="Utilitaire">
+                Choisir cette gamme
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section service-band" id="services" aria-labelledby="services-title">
+        <div class="section-heading align-left">
+          <p class="eyebrow dark">Location claire</p>
+          <h2 id="services-title">Ce que l'agence peut organiser</h2>
+        </div>
+
+        <div class="service-grid">
+          <article>
+            <span class="service-icon">01</span>
+            <h3>Location courte durée</h3>
+            <p>Pour un déplacement ponctuel, un week-end ou un besoin immédiat.</p>
+          </article>
+          <article>
+            <span class="service-icon">02</span>
+            <h3>Location longue durée</h3>
+            <p>Pour les entreprises, indépendants ou clients qui veulent planifier.</p>
+          </article>
+          <article>
+            <span class="service-icon">03</span>
+            <h3>Contrat sans chauffeur</h3>
+            <p>Une activité centrée sur le véhicule loué, sans prestation de conduite.</p>
+          </article>
+          <article>
+            <span class="service-icon">04</span>
+            <h3>Conseil sur la gamme</h3>
+            <p>Un choix guidé selon le trajet, les passagers et le volume nécessaire.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reservation-section" id="reservation" aria-labelledby="reservation-title">
+        <div class="reservation-copy">
+          <p class="eyebrow dark">Réservation</p>
+          <h2 id="reservation-title">Préparer votre demande</h2>
+          <p>
+            Remplissez les dates et la catégorie souhaitée. Le site prépare un récapitulatif
+            clair à communiquer à l'agence pour confirmer disponibilité, pièces demandées et tarif.
+          </p>
+        </div>
+
+        <div class="request-panel" aria-live="polite">
+          <h3>Votre demande</h3>
+          <p id="request-summary">
+            Choisissez vos dates dans le formulaire en haut de page ou sélectionnez une gamme.
+          </p>
+          <dl>
+            <div>
+              <dt>Agence</dt>
+              <dd>3189, Lot Wifak Erak T/461 RDC - Temara (M)</dd>
+            </div>
+            <div>
+              <dt>Activité</dt>
+              <dd>Loueur de véhicules automobiles sans chauffeur</dd>
+            </div>
+          </dl>
+          <div class="panel-actions">
+            <button class="button secondary" id="copy-address" type="button">Copier l'adresse</button>
+            <a
+              class="button ghost dark"
+              href="https://www.google.com/maps/search/?api=1&query=3189%20Lot%20Wifak%20Erak%20T461%20RDC%20Temara%20Morocco"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ouvrir la carte
+            </a>
+          </div>
+          <p class="microcopy" id="copy-status" role="status"></p>
+        </div>
+      </section>
+
+      <section class="section info-section" id="infos" aria-labelledby="infos-title">
+        <div class="section-heading align-left">
+          <p class="eyebrow dark">Informations société</p>
+          <h2 id="infos-title">SM TEMA CARS</h2>
+          <p>Informations administratives communiquées pour la société.</p>
+        </div>
+
+        <div class="legal-grid">
+          <div class="legal-card">
+            <h3>Coordonnées</h3>
+            <dl class="legal-list">
+              <div>
+                <dt>Adresse</dt>
+                <dd>3189 LOT WIFAK ERAK T461 RDC, Temara (M), MA</dd>
+              </div>
+              <div>
+                <dt>Activité</dt>
+                <dd>Loueur de véhicules automobiles sans chauffeur</dd>
+              </div>
+              <div>
+                <dt>DUNS Number</dt>
+                <dd>952274572</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="legal-card">
+            <h3>Identification</h3>
+            <dl class="legal-list">
+              <div>
+                <dt>RC</dt>
+                <dd>141451 (Tribunal de Temara)</dd>
+              </div>
+              <div>
+                <dt>ICE</dt>
+                <dd>003435144000087</dd>
+              </div>
+              <div>
+                <dt>Forme juridique</dt>
+                <dd>Société à Responsabilité Limitée</dd>
+              </div>
+              <div>
+                <dt>Capital</dt>
+                <dd>100 000 D</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> SM TEMA CARS. Location de véhicules automobiles sans chauffeur.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Politique de confidentialité</a>
+        <a href="#accueil">Retour en haut</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
